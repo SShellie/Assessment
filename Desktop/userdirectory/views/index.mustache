@@ -1,0 +1,44 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <h3>Index</h3>
+  <meta charset="utf-8">
+      <link rel="stylesheet" href="main.css">
+    <style type="text/css">
+
+    </style>
+       </head>
+
+       <body>
+         <div class="container-mt-4">
+         <div class="row">
+        {{#users}}
+          <div class="col-3">
+            <div class="mb-3">
+              <img class="card-img-top" src="{{avatar}}" alt="Picture of {{name}}">
+              <div class="card-block">
+                <h4 class="card-title">
+
+        <a href="/{{ username }}">
+                  {{name}}
+        </a>
+                </h4>
+                {{#job}}
+                <p class="card-text text-muted">
+                  {{ job }}, {{ company }} {{skills}}
+                </p>
+              {{/job}}
+              {{^job}}
+
+       <div class="text-danger">Available for hire
+       </div>
+                {{/job}}
+              </div>
+          </div>
+          </div>
+            {{/users}}
+    </div>
+    </div>
+   </body>
+   </html>
